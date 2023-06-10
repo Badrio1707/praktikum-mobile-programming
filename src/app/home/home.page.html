@@ -1,0 +1,56 @@
+<ion-header [translucent]="true">
+  <ion-toolbar>
+    <ion-title>
+      Blank
+    </ion-title>
+  </ion-toolbar>
+</ion-header>
+
+<ion-content [fullscreen]="true" >
+  <ion-header collapse="condense">
+    <ion-toolbar>
+      <ion-title size="large">Blank</ion-title>
+    </ion-toolbar>
+  </ion-header>
+
+  <div id="container" class="ion-padding">
+    <ion-item fill="outline" class="ion-margin-bottom">
+      <ion-label position="floating">Telpon</ion-label>
+      <ion-input type="number" placeholder="Enter text" [(ngModel)]="form.telpon" required></ion-input>
+    </ion-item>
+    <ion-item fill="outline" class="ion-margin-bottom">
+      <ion-label position="floating">NIK</ion-label>
+      <ion-input type="number" placeholder="Enter text" [(ngModel)]="form.nik" required></ion-input>
+    </ion-item>
+    <ion-item fill="outline" class="ion-margin-bottom">
+      <ion-label position="floating">Nama</ion-label>
+      <ion-input type="text" placeholder="Enter text" [(ngModel)]="form.nama" required></ion-input>
+    </ion-item>
+    <ion-item fill="outline" class="ion-margin-bottom">
+      <ion-label position="floating">Tanggal Lahir</ion-label>
+      <ion-input type="date" [(ngModel)]="form.tgl" required></ion-input>
+    </ion-item>
+    <ion-item>
+      <ion-label>Jenis Kelamin</ion-label>
+      <ion-select [(ngModel)]="form.jk" placeholder="Pilih" required>
+        <ion-select-option value="Laki-laki">Laki-laki</ion-select-option>
+        <ion-select-option value="Perempuan">Perempuan</ion-select-option>
+      </ion-select>
+    </ion-item>
+    <ion-item fill="outline" class="ion-margin-bottom">
+      <ion-label position="floating">Alamat</ion-label>
+      <ion-input type="text" placeholder="Enter text" [(ngModel)]="form.alamat" required></ion-input>
+    </ion-item>
+    <ion-item fill="outline" class="ion-margin-bottom">
+      <ion-label position="floating">Pekerjaan</ion-label>
+      <ion-input type="text" placeholder="Enter text" [(ngModel)]="form.pekerjaan" required></ion-input>
+    </ion-item>
+    <ion-button (click)="trackLocation()" expand="block">
+      Share Lokasi
+    </ion-button>
+    <ion-button routerLink="/history" expand="block">
+      History
+    </ion-button>
+  </div>
+
+</ion-content>
